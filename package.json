@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "binding": "^3.0.3",
     "cloudinary": "^2.0.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
@@ -21,6 +22,7 @@
     "express": "^4.18.3",
     "express-fileupload": "^1.4.3",
     "jsonwebtoken": "^9.0.2",
+    "lib": "^5.1.0",
     "mongoose": "^8.2.0",
     "validator": "^13.11.0"
   }
