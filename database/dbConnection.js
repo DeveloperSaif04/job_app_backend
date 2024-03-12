@@ -5,7 +5,7 @@ export const dbConnection = () => {
 
   console.log("sdj",process.env.MONGO_URL+'/job')
   mongoose
-    .connect(process.env.MONGO_URL+'/job')
+    .connect(process.env.MONGO_URL)
     .then(() => {
       console.log("Connected to database.");
     })
