@@ -15,7 +15,7 @@ config();
 app.use(
   cors({
     origin: [process.env.FRONTEND_URL],
-    method: ["GET", "POST", "DELETE", "PUT"],
+    methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
 );
@@ -29,11 +29,14 @@ app.use(
     useTempFiles: true,
     tempFileDir: "/tmp/",
   })
-  );
+);
+
 dbConnection();
+
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/job", jobRouter);
 app.use("/api/v1/application", applicationRouter);
 
 app.use(errorMiddleware);
+
 export default app;
