@@ -15,7 +15,7 @@ config();
 app.use(
   cors({
     
-    origin: process.env.FRONTEND_URL,
+    origin:"https://job-app-frontend-kappa.vercel.app/",
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
