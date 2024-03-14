@@ -14,7 +14,8 @@ config();
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin:"https://mern-job-application.netlify.app/login",
+    // origin: [process.env.FRONTEND_URL],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
