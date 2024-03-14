@@ -10,16 +10,18 @@ import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
 
 const app = express();
-config();
+config({path:"./.env"});
 
 app.use(
   cors({
-    // origin:"https://mern-job-application.netlify.app/login",
-    origin: [process.env.FRONTEND_URL],
+    
+    origin: process.env.FRONTEND_URL,
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
 );
+
+
 
 app.use(cookieParser());
 app.use(express.json());
